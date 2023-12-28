@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="word.css">
+    <title>FIND A SEARCH WORD</title>
+</head>
+<body>
+
+<div id="word-grid">
+    <div class="a1">
+        <input type="text" id="searchInput" placeholder="Search..." style="margin-left: 450px;">
+        <button id="searchButton" style="margin-left: 30px;">Search</button>
+    </div>
+        <p id="words">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus fugit delectus consequuntur minima cupiditate sed blanditiis tempore repellendus ab! Aut magni incidunt exercitationem sed molestiae neque asperiores nisi dicta esse.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis officia, nobis qui, perspiciatis ratione magnam illo dolorum fugit exercitationem, tempore pariatur tenetur veritatis totam porro aliquid minima aut? Minima, nesciunt.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda molestiae impedit voluptatem alias vitae dolor culpa unde, sit officiis reiciendis distinctio quam consequuntur deserunt non nisi, aut sed, aliquid debitis.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus commodi iure neque et est distinctio doloribus accusantium rerum expedita. Consequatur nesciunt nemo ducimus, dolorum ab soluta dignissimos incidunt earum doloremque.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus recusandae tenetur a quia maxime iste beatae quaerat quam voluptate, sapiente blanditiis vero. Eveniet facere, laudantium ex neque nemo consequatur! Ipsam?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque pariatur iste atque. Expedita autem magni atque rem veritatis dolorem ea consequatur impedit et reiciendis ipsa saepe vel, excepturi quaerat eos.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptas, non iure dolorem aut quisquam deleniti nam adipisci dolorum ipsum sapiente magni maxime aliquid repudiandae earum delectus velit ratione eveniet.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur illo ipsam aut autem qui aspernatur doloremque laborum delectus quas voluptatibus, tenetur vero temporibus iste veniam. Enim dicta placeat quod eaque?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi saepe ipsam blanditiis consequuntur nam dolore iste voluptatibus, officia minima nihil ratione ducimus, eligendi quibusdam ab temporibus enim obcaecati provident quasi!
+        </p>
+</div>
+
+
+<script>
+var words = document.getElementById("words");
+var searchButton = document.getElementById("searchButton")
+
+searchButton.addEventListener('click',() =>{
+  var searchInput = document.getElementById("searchInput").value;
+
+  if(searchInput !== ""){
+
+    var regExp = new RegExp(searchInput, "gi")
+    words.innerHTML= words.textContent.replace(regExp,"<mark>$&</mark>");
+  }
+
+});
+
+
+</script>
+
+</body>
+</html>
+
+
+
